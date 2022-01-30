@@ -1,5 +1,6 @@
 import datetime
 
+
 class Scooter:
     def __init__(self, type, name):
         self.type = type
@@ -17,7 +18,3 @@ class Scooter:
         self.return_date = datetime.datetime.now()
         self.busy = False
         self.rent_time = self.return_date - self.rent_date
-
-# eloo
-#elooo
-print("elo")
