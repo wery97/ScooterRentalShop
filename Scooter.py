@@ -19,3 +19,5 @@ class Scooter:
         self.rent_time = self.return_date - self.rent_date
 
 # eloo
+#elooo
+print("elo")
