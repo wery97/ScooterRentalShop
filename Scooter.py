@@ -1,4 +1,5 @@
 import datetime
+import Client
 
 
 class Scooter:
@@ -8,7 +9,7 @@ class Scooter:
         self.return_date = 0
         self.busy = False
         self.name = name
-        self.rent_time = 0
+        self.rent_time = datetime.datetime.now()
 
     def rent(self):
         self.rent_date = datetime.datetime.now()

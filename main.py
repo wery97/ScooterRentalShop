@@ -1,5 +1,8 @@
 from RentalShop import RentalShop
 from os.path import exists
+from Scooter import Scooter
+
+
 shop_number_one = RentalShop(small_Scooter=5, big_Scooter=5)
 
 fare = 0
@@ -13,7 +16,9 @@ while True:
     print("Good morning\n How can i help you?")
     print("1. Rent a scooter")
     print("2. Return a scooter")
-    print("3. Goodbye")
+    print("3. Add Scooter")
+    print("4. Goodbye")
+
     a = input()
     if int(a) == 1:
         shop_number_one.show_available_scooters()
@@ -41,5 +46,14 @@ while True:
                     fare += 1
         shop_number_one.save_list_of_scooters("scooter")
         print("You pay " + str(fare * 20) + "$")
+    elif int(a) == 3:
+        shop_number_one.logging_owner()
+        if shop_number_one.logged:
+            new_type = input("Type type of scooter: ")
+            new_name = input("Type name of scooter: ")
+            shop_number_one.list_of_scooters.append(Scooter(new_type == 'True', new_name))
+        else:
+            continue
+
     else:
         exit()
